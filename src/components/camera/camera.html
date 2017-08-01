@@ -1,0 +1,25 @@
+<!-- Generated template for the CameraComponent component -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Camera
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<div>
+    <p>Version : 1.2</p>
+  <button ion-button (click)="scanBC()">Scan Barcode </button>
+    <div *ngIf="scanData">
+        <p>Scanned Text :{{scanData.text}} </p>
+        <p>Scanned Format :{{scanData.format}} </p>
+        
+    </div>
+</div>
+<div>
+    <button ion-button (click)="scanQR()">Scan QRcode </button>
+    <div>
+    </div>
+</div>
+</ion-content>
+
