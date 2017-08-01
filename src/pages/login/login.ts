@@ -10,21 +10,8 @@ import {NotiryPage} from "../notiry/notiry";
  */
  
 @Component({
-   template: `
-   <ion-content padding>
-    <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
-      <ion-item>
-        <ion-label>User</ion-label>
-        <ion-input type="text" required="true" [(ngModel)]="todo.User" name = "User" ngControl="User"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Password</ion-label>
-        <ion-textarea type="password" [(ngModel)]="todo.Password" name = "Password" ngControl="Password"></ion-textarea>
-      </ion-item>
-      <button ion-button type="submit" block>ok</button>
-    </form>
-    </ion-content>
-  `,
+   selector: 'page-login',
+  templateUrl: 'login.html'
 })
 export class LoginPage {
   

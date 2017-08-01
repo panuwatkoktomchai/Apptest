@@ -1,8 +1,22 @@
-<!--
-  Generated template for the LoginPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-
-
+<ion-content id="test">
+      <ion-item id="txt">
+        <p>
+          LOGIN FOR WARGNING
+        </p>
+         <h5>เมื่อคุณมีเหตุการฉุกเฉิน หรือหากต้องการขอความช่วยเหลือ</h5>
+      </ion-item>
+    <form #form="ngForm" (ngSubmit)="logForm(form)">
+      <ion-item id="user">
+        <ion-label>User</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.User" name = "User" ngControl="User"></ion-input>
+      </ion-item>
+      
+      <ion-item id="user">
+        <ion-label>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="todo.Password" name = "Password" ngControl="Password"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" block>ok</button>
+    </form>
+    </ion-content>
+  

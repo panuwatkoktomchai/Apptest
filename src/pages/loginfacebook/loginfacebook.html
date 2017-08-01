@@ -7,12 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>loginfacebook</ion-title>
+    <ion-title>login</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+<button ion-button full (click)="loginFB()">login</button>
+<ion-card *ngIf="userData">
+<ion-card-header>{{userData.username}}</ion-card-header>
+</ion-card>
 </ion-content>

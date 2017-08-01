@@ -18,6 +18,7 @@ import { GoogleMaps,GoogleMap } from '@ionic-native/google-maps';
 import { TellPage } from "../pages/tell/tell";
 import { CallNumber } from '@ionic-native/call-number';
 import { ShowalertComponent } from '../components/showalert/showalert';
+import { Facebook } from '@ionic-native/Facebook';
 @NgModule({
   declarations: [
     MyApp,
@@ -55,6 +56,7 @@ import { ShowalertComponent } from '../components/showalert/showalert';
     Geolocation,
     GoogleMaps,
     CallNumber,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

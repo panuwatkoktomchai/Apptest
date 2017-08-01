@@ -17,7 +17,7 @@ export class ShowalertComponent {
 
   constructor(public alerCtrl:AlertController){}
 
-  showalert(txt_title,txt_message) {
+  ionViewDidLoad(txt_title,txt_message) {
     let confirm = this.alerCtrl.create({
       title: txt_title,
       message: txt_message,
