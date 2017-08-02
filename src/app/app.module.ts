@@ -29,7 +29,7 @@ import { Facebook } from '@ionic-native/Facebook';
     NotiryPage,
     CausePage,
     TellPage,
-    ShowalertComponent
+    ShowalertComponent,
     
   ],
   imports: [
@@ -45,7 +45,8 @@ import { Facebook } from '@ionic-native/Facebook';
     LoginPage,
     NotiryPage,
     CausePage,
-    TellPage
+    TellPage,
+    
   ],
   providers: [
     StatusBar,
@@ -57,7 +58,7 @@ import { Facebook } from '@ionic-native/Facebook';
     GoogleMaps,
     CallNumber,
     Facebook,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler,}
   ]
 })
 export class AppModule {}
