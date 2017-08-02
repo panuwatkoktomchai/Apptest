@@ -4,6 +4,7 @@ import { CausePage } from "../cause/cause";
 import { TellPage } from "../tell/tell";
 import { CallNumber } from "@ionic-native/call-number";
 import { ShowalertComponent } from "../../components/showalert/showalert";
+import { LoginPage } from "../login/login";
 
 /**
  * Generated class for the NotiryPage page.
@@ -19,6 +20,10 @@ import { ShowalertComponent } from "../../components/showalert/showalert";
 export class NotiryPage {
   goCause = CausePage
   goTell = TellPage
+  Cause = CausePage
+  tell = TellPage
+  News = LoginPage
+  Quast = LoginPage
   Name:String
    Pass:String
    Age:string
@@ -62,6 +67,15 @@ export class NotiryPage {
     
     confirm.present()
     
+  }
+
+  gopage(txt){
+    if (txt =="01") {
+      console.log(txt)
+      CausePage
+    }else if(txt =="02"){
+
+    }
   }
 
 }

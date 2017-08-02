@@ -1,33 +1,57 @@
-<!--
-  Generated template for the NotifyPage page.
+<!-- Header -->
+  <ion-header>
+    SOS
+  </ion-header>
+<!-- end header -->
+<ion-content padding id="BG">
+    <ion-grid>
+        <ion-row> 
+<!-- grid-col -->
+            <ion-col col-sm-6 col-md-4 col-lg-3>
+                <ion-card id = "card"> 
+                <img [navPush]="Cause" src="assets/img/img-warning.png"/>
+                    <ion-card-header id="head">
+                      แจ้งเหตุฉูกเฉิน
+                    </ion-card-header>
+                    <ion-card-content>
+                      <!-- info -->
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+<!-- grid-col -->
+          <ion-col col-sm-6 col-md-4 col-lg-3>
+            <ion-card id = "card">
+          <img [navPush]="tell" src="assets/img/img-sos.png"/>
+        <ion-card-header id="head">
+          เบอร์ฉุกเฉิน
+        </ion-card-header>
+        <ion-card-content>
+        </ion-card-content>
+      </ion-card>
+          </ion-col>
+          <ion-col col-sm-6 col-md-4 col-lg-3>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+            <ion-card id = "card">
+              <img [navPush]="News" src="assets/img/img-news.png"/>
+              <ion-card-header id="head">
+                ข่าวสารเหตุการณ์
+              </ion-card-header>
+                <ion-card-content>
+                </ion-card-content>
+            </ion-card>
 
-  
-    แจ้งเหตุฉุกเฉิน
-  
-</ion-header>
+          </ion-col>
+          <ion-col col-sm-6 col-md-4 col-lg-3>
+            <ion-card id = "card">
+              <img [navPush]="Quast" src="assets/img/img-quastion.png"/>
+              <ion-card-header id="head">
+                สอบถาม
+              </ion-card-header>
+                <ion-card-content>
+                </ion-card-content>
+            </ion-card>
 
-
-<ion-content padding>
-  <button ion-button block large class="button" [navPush]="goCause" icon-only>
-     <ion-icon name="star"></ion-icon>
-     แจ้งเหตุ
-  </button>
-  <button ion-button block large class="button" [navPush]="goTell" icon-only>
-    <ion-icon name=""></ion-icon>
-    โทรฉุกเฉิน
-  </button>     
-  <ion-item> 
-      <ion-label> เบอร์โทรศัพท์</ion-label>  <!--1-->
-  <ion-input type="tel" [(ngModel)] = "phoneNumber"></ion-input>
-  </ion-item>
-  <ion-item>
-    <button ion-fab (click)="callNumber()">
-      <ion-icon name="call" ></ion-icon>
-    </button>
-  </ion-item>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

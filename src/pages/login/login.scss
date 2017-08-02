@@ -1,33 +1,70 @@
 page-login {
+    ion-icon{
+        color: white;
+        font-size: 25px;
+    }
+    ion-header{
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    #FBlogin{
+        margin-top: 5px;
+        background-color: blue;
+        color: black;
+        text-shadow: #FF6E17;
+        border-radius: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 97%;
+        color: white;
+    }
     #test{
         background-color:#FFB00D;
-        height: 100%;
     }
     #user{
+        margin-top: 20px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        margin-left: 5px;
+        border-radius: 10px;
+        width: 97%;
+    }
+    #pass{
         margin-top: 5px;
         margin-bottom: 5px;
-        margin-right: 20px;
+        margin-right: 5px;
         margin-left: 5px;
         border-radius: 10px;
         width: 97%;
     }
     #txt{
-        height: 50%;
+        height: 150px;
         background-color: #FFB00D;
-        border: solid 1px;
         border-radius: 10px;
         margin: 5px 5px 5px 5px;
         width: 97%;
-        border-color: #FF6E17;
 
-    }
-    input[type='text']{
-        
     }
     #txt p {
         font-size: 30px;
         color: #FF6E17;
         text-align: left;
     }
+    #BTlogin{
+        margin-top: 10px;
+        background-color: #F2E137;
+        color: black;
+        text-shadow: #FF6E17;
+        border-radius: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 97%;
+        
+    }
+    
+    
     
 }

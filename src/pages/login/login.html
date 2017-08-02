@@ -1,22 +1,20 @@
-
+<ion-header>
+    แจ้งเหตุฉุกเฉิน
+</ion-header>
 <ion-content id="test">
-      <ion-item id="txt">
-        <p>
-          LOGIN FOR WARGNING
-        </p>
-         <h5>เมื่อคุณมีเหตุการฉุกเฉิน หรือหากต้องการขอความช่วยเหลือ</h5>
-      </ion-item>
-    <form #form="ngForm" (ngSubmit)="logForm(form)">
+    <form #form="ngForm" (ngSubmit)="check(form)">
       <ion-item id="user">
         <ion-label>User</ion-label>
         <ion-input type="text" [(ngModel)]="todo.User" name = "User" ngControl="User"></ion-input>
       </ion-item>
       
-      <ion-item id="user">
+      <ion-item id="pass">
         <ion-label>Password</ion-label>
         <ion-input type="password" [(ngModel)]="todo.Password" name = "Password" ngControl="Password"></ion-input>
       </ion-item>
-      <button ion-button type="submit" block>ok</button>
+      <button id="BTlogin" ion-button type="submit" block>LOGIN</button>
     </form>
+    <button id="BTlogin" ion-button [navPush]="Back" block>BACK</button>
+    <button id="FBlogin" ion-button  block><ion-icon name="logo-facebook"></ion-icon> &nbsp;&nbsp; Facebook login</button>
     </ion-content>
   
