@@ -1,3 +1,36 @@
 page-cause {
 
+    ion-icon{
+        font-size: 100px;
+        color: #FF6F18;
+
+    }
+    #icon{
+        border: solid 1px; //กำหนดเส้นขอบไอคอน
+        border-radius: 5px; //ขอบโค้ง
+        color: #FF6F18; //สีไอคอน
+        text-align: center;
+        background-color: gold; //พื้นหลังไอคอน
+    }
+    #icon:hover{
+        background-color: white;
+    }
+    #bordergrid{
+        border: solid 1px;
+        border-radius: 5px;
+        border-color: gold;
+        margin: 10px;
+         background-color: #FFF1C8;
+     }
+    h2,ion-label{
+        color: goldenrod;
+    }
+    #Submit{
+        background-color: gold;
+        text-align: center;
+        color: black;
+        height: 40px;
+        width: 150px;
+    }
 }
+
