@@ -13,40 +13,15 @@ import { CallNumber } from '@ionic-native/call-number';
   templateUrl: 'tell.html',
 })
 export class TellPage {
-
+  phoneNumber = {
+    item1: {
+      tell:'191',
+      name:'เหตุด่วนเหุตร้าย'
+    }
+  } 
   constructor(public alerCtrl:AlertController,public navCtrl: NavController, public navParams: NavParams,private callNumber: CallNumber) {
   }
-  
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TellPage');
+  CallPhone(number){
+    console.log(number)
   }
-  phone(num){
-    this.callNumber.callNumber('0990435915', true)
-  .then(() => this.logForm('lauching dialer'))
-  .catch(() => this.logForm('error lauching dialer'));
-  }
-logForm(form) {
-    let confirm = this.alerCtrl.create({
-      title: 'ผลการยืนยัน',
-      message: form,
-      buttons: [
-        {
-          text: 'ตกลง',
-          handler: () => {
-          
-        }
-        },
-        {
-          text: 'ยกเลิก',
-          handler: () => {
-           console.log('cancel')
-          }
-        }
-      ]
-    });
-    
-    confirm.present()
-    
-  }
-
 }

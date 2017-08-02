@@ -6,42 +6,58 @@
 <ion-content padding id="BG">
     <ion-grid>
         <ion-row> 
-<!-- grid-col -->
-            <ion-col col-sm-6 col-md-4 col-lg-3>
+
+<!-- grid-col แจ้งเหตุฉูกเฉิน -->
+
+            <ion-col col-xs-6 col-sm-6 col-md-4 col-lg-3>
                 <ion-card id = "card"> 
                 <img [navPush]="Cause" src="assets/img/img-warning.png"/>
                     <ion-card-header id="head">
                       แจ้งเหตุฉูกเฉิน
                     </ion-card-header>
                     <ion-card-content>
+
                       <!-- info -->
+
                     </ion-card-content>
                 </ion-card>
             </ion-col>
-<!-- grid-col -->
-          <ion-col col-sm-6 col-md-4 col-lg-3>
-            <ion-card id = "card">
-          <img [navPush]="tell" src="assets/img/img-sos.png"/>
-        <ion-card-header id="head">
-          เบอร์ฉุกเฉิน
-        </ion-card-header>
-        <ion-card-content>
-        </ion-card-content>
-      </ion-card>
-          </ion-col>
-          <ion-col col-sm-6 col-md-4 col-lg-3>
 
-            <ion-card id = "card">
-              <img [navPush]="News" src="assets/img/img-news.png"/>
-              <ion-card-header id="head">
-                ข่าวสารเหตุการณ์
-              </ion-card-header>
-                <ion-card-content>
-                </ion-card-content>
-            </ion-card>
+<!-- grid-col เบอร์ฉุกเฉิน -->
 
-          </ion-col>
-          <ion-col col-sm-6 col-md-4 col-lg-3>
+            <ion-col col-xs-6 col-sm-6 col-md-4 col-lg-3>
+                <ion-card id = "card">
+                <img [navPush]="tell" src="assets/img/img-sos.png"/>
+                    <ion-card-header id="head">
+                      เบอร์ฉุกเฉิน
+                    </ion-card-header>
+                    <ion-card-content>
+
+                      <!-- info -->
+
+                    </ion-card-content>
+                </ion-card>
+              </ion-col>
+
+<!-- grid-col ข่าวสารเหตุการณ์ -->
+
+            <ion-col col-xs-6 col-sm-6 col-md-4 col-lg-3>
+                <ion-card id = "card">
+                <img [navPush]="News" src="assets/img/img-news.png"/>
+                    <ion-card-header id="head">
+                      ข่าวสารเหตุการณ์
+                    </ion-card-header>
+                    <ion-card-content>
+
+                      <!-- info -->
+
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+<!-- grid-col สอบถาม -->
+
+          <ion-col col-xs-6 col-sm-6 col-md-4 col-lg-3>
             <ion-card id = "card">
               <img [navPush]="Quast" src="assets/img/img-quastion.png"/>
               <ion-card-header id="head">
@@ -50,8 +66,10 @@
                 <ion-card-content>
                 </ion-card-content>
             </ion-card>
-
           </ion-col>
+
+<!-- grid-col -->
+
         </ion-row>
     </ion-grid>
 </ion-content>

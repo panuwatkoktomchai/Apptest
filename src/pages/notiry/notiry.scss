@@ -1,5 +1,5 @@
 page-notiry {
-    background-color: #FFB00D;
+    
 ion-header{
         margin-top: 10px;
         width: 100%;
@@ -18,5 +18,8 @@ ion-header{
     }
     #card{
         background-color: #FF6B18;
+    }
+    #card:hover{
+        background-color: red;
     }
 }
