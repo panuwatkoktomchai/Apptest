@@ -23,17 +23,17 @@
       </ion-col>
       <ion-col col-sm-6 col-md-4 col-lg-3>
         <div id="icon">
-          <ion-icon name="add-circle"></ion-icon>
+          <ion-icon name="add-circle" (click)="insert('img2')"></ion-icon>
         </div>
       </ion-col>
       <ion-col col-sm-6 col-md-4 col-lg-3>
         <div id="icon">
-          <ion-icon name="add-circle"></ion-icon>
+          <ion-icon name="add-circle" (click)="insert('img3')"></ion-icon>
         </div>
       </ion-col>
       <ion-col col-sm-6 col-md-4 col-lg-3>
         <div id="icon">
-          <ion-icon name="add-circle"></ion-icon>
+          <ion-icon name="add-circle" (click)="insert('img4')"></ion-icon>
         </div>
       </ion-col>
     </ion-row>
@@ -43,12 +43,12 @@
     <ion-label>แจ้งเหตุ</ion-label>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="เหตุ"></ion-input>
+    <ion-input placeholder="เหตุ" value ="{{Ulocat.lati}}"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-textarea placeholder="รายละเอียด"></ion-textarea>
+    <ion-textarea placeholder="รายละเอียด" value ="{{Ulocat.logi}}"></ion-textarea>
   </ion-item>
- <ion-icon name="pin"></ion-icon>
+ <ion-icon name="pin" (click) ="Ulocation()"></ion-icon>
   </ion-list>
   <div align="center">
     <button ion-button type="submit" id="Submit">บันทึก</button>

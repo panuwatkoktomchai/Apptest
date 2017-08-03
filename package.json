@@ -35,8 +35,7 @@
     "call-number": "^1.0.1",
     "cordova-plugin-camera": "^2.4.1",
     "cordova-plugin-facebook4": "^1.9.1",
-    "cordova-plugin-geolocation": "^2.4.3",
-    "cordova-plugin-googlemaps": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps.git#multiple_maps",
+    "cordova-plugin-geolocation": "git+https://github.com/apache/cordova-plugin-geolocation.git",
     "cordova-plugin-inappbrowser": "^1.7.1",
     "cordova-plugin-qrscanner": "^2.5.0",
     "cordova-plugin-vibration": "^2.1.5",
@@ -64,9 +63,6 @@
       "cordova-plugin-qrscanner": {},
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-geolocation": {},
-      "cordova-plugin-googlemaps": {
-        "API_KEY_FOR_ANDROID": "AIzaSyCLfCih5YRm1C0aGHhgXLcca8LzgPJI56A"
-      },
       "mx.ferreyra.callnumber": {},
       "cordova-plugin-facebook4": {
         "APP_ID": "265874113897378",
