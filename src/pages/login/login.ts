@@ -16,9 +16,12 @@ import {NotiryPage} from "../notiry/notiry";
 })
 export class LoginPage {
   auth: any;
-  constructor(public alerCtrl: AlertController, public navCtrl: NavController) { }
-  Back = NotiryPage
-  
-  
+  constructor(public alerCtrl: AlertController, public navCtrl: NavController) { 
+    
+  }
+  login() {
+       
+    }
+
   
 }
