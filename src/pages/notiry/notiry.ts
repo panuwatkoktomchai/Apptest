@@ -5,6 +5,7 @@ import { TellPage } from "../tell/tell";
 import { CallNumber } from "@ionic-native/call-number";
 import { ShowalertComponent } from "../../components/showalert/showalert";
 import { LoginPage } from "../login/login";
+import { NewsPage } from "../news/news";
 
 /**
  * Generated class for the NotiryPage page.
@@ -22,7 +23,7 @@ export class NotiryPage {
   goTell = TellPage
   Cause = CausePage
   tell = TellPage
-  News = LoginPage
+  News = NewsPage
   Quast = LoginPage
   Name:String
    Pass:String

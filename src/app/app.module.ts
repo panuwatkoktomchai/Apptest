@@ -19,6 +19,7 @@ import { TellPage } from "../pages/tell/tell";
 import { CallNumber } from '@ionic-native/call-number';
 import { ShowalertComponent } from '../components/showalert/showalert';
 import { Facebook } from '@ionic-native/Facebook';
+import { NewsPage } from "../pages/news/news";
 @NgModule({
   declarations: [
     MyApp,
@@ -30,6 +31,7 @@ import { Facebook } from '@ionic-native/Facebook';
     CausePage,
     TellPage,
     ShowalertComponent,
+    NewsPage
     
   ],
   imports: [
@@ -46,6 +48,7 @@ import { Facebook } from '@ionic-native/Facebook';
     NotiryPage,
     CausePage,
     TellPage,
+    NewsPage
     
   ],
   providers: [

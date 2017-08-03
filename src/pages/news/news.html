@@ -7,12 +7,33 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>news</ion-title>
+    <ion-title>ข่าวสาร</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
-</ion-content>
+<ion-content>
+  <div id="bordergrid">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-sm-6 col-md-4 col-lg-3>
+        <div id="img">
+           <img src="assets/img/news1.jpg">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+  <ion-item>
+    <ion-label>ข่าว น้ำท่วมขอนแก่น</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-textarea placeholder="น้ำท่วมขอนแก่น ฝนตกหนักมาก ขับรถดีๆนะทุกคน ด้วยความเป็นห่วง อิอิ"></ion-textarea>
+  </ion-item>
+ <ion-item>
+   <ion-label><ion-icon id="map" name="pin"> </ion-icon>บริเวณบ้านโนนทัน ขอนแก่น</ion-label>
+  </ion-item>
+  </ion-list>
+  </div>
+  </ion-content>
