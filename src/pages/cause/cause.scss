@@ -2,9 +2,9 @@ page-cause {
     #icon{
         border: solid 1px; //กำหนดเส้นขอบไอคอน
         border-radius: 5px; //ขอบโค้ง
-        color: #FF6F18; //สีไอคอน
+        color: #F9ECFF; //สีไอคอน
         text-align: center;
-        background-color: gold; //พื้นหลังไอคอน
+        background-color: #FFCF0D; //พื้นหลังไอคอน
         font-size: 100px;
     }
     #icon:hover{
@@ -15,7 +15,7 @@ page-cause {
         border-radius: 5px;
         border-color: gold;
         margin: 10px;
-         background-color: #FFF1C8;
+        background-color: #FF9933;
      }
     h2,ion-label{
         color: goldenrod;
@@ -26,6 +26,11 @@ page-cause {
         color: black;
         height: 40px;
         width: 150px;
+    }
+    #ohicon{
+        font-size: 50px;
+        color: orangered;
+        text-align: center;
     }
 }
 

@@ -48,7 +48,9 @@
   <ion-item>
     <ion-textarea placeholder="รายละเอียด" value ="{{Ulocat.logi}}"></ion-textarea>
   </ion-item>
-  <ion-icon name="pin" (click) ="Ulocation()"></ion-icon>
+  <ion-item  id="ohicon">
+      <ion-icon name="pin" (click) ="Ulocation()"></ion-icon>
+  </ion-item>
   </ion-list>
   <div align="center">
     <button ion-button type="submit" id="Submit">บันทึก</button>
