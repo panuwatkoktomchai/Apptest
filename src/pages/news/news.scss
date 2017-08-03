@@ -1,28 +1,27 @@
 page-news {
+    
+        
+    div.scroll-content{
+        background-color: #FFB00D;
+        padding: 10px;
+    }
+   #card{
+        background-color: #FFF1C8; 
+    }
 
-
+    ion-header{
+        background-color: #FF6F18; 
+    }
     ion-icon{
         font-size: 100px;
         color: #FF6F18;
-
     }
-    #bordergrid{
-        border: solid 1px;
-        border-radius: 5px;
-        border-color: gold;
-        margin: 10px;
-         background-color: #FFF1C8;
-     }
-    #map{
-            font-size: 40px;
-            
+        #fab1{
+            background-color: white;
         }
-    #img{
-        border-radius: 5px; //ขอบโค้ง
-        text-align: center;
-    }
-   
-
-
-
+        #div1{
+            padding: 5px;
+            margin: 5px;
+            border-radius: 2px;
+        }
 }
