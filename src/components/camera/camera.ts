@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { Camera, CameraOptions } from '@ionic-native/camera';
+import { QRScanner } from '@ionic-native/qr-scanner';
+
 import { AlertController } from "ionic-angular";
 /**
  * Generated class for the CameraComponent component.
@@ -15,6 +14,6 @@ import { AlertController } from "ionic-angular";
 })
 export class CameraScannerBarcode{
   
-  constructor(private barcodeScanner: BarcodeScanner,public alerCtrl: AlertController,private qrScanner: QRScanner) { }
+  constructor() { }
 }
 

@@ -14,7 +14,7 @@ import { LoginPage } from "../pages/login/login";
 import { NotiryPage } from "../pages/notiry/notiry";
 import { CausePage } from "../pages/cause/cause";
 import { Geolocation } from '@ionic-native/geolocation';
-import { GoogleMaps,GoogleMap } from '@ionic-native/google-maps';
+import { GoogleMaps } from '@ionic-native/google-maps';
 import { TellPage } from "../pages/tell/tell";
 import { CallNumber } from '@ionic-native/call-number';
 import { ShowalertComponent } from '../components/showalert/showalert';
@@ -68,4 +68,6 @@ import { QuastPage } from "../pages/quast/quast";
     {provide: ErrorHandler, useClass: IonicErrorHandler,}
   ]
 })
-export class AppModule {}
+export class AppModule {
+  
+}

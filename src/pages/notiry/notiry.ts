@@ -3,8 +3,6 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { CausePage } from "../cause/cause";
 import { TellPage } from "../tell/tell";
 import { CallNumber } from "@ionic-native/call-number";
-import { ShowalertComponent } from "../../components/showalert/showalert";
-import { LoginPage } from "../login/login";
 import { NewsPage } from "../news/news";
 import { QuastPage } from "../quast/quast";
 
