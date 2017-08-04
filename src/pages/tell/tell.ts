@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController } from 'ionic-angular';
-import { CallNumber } from '@ionic-native/call-number';
+import { NavController } from 'ionic-angular';
+
+declare var window;
 /**
  * Generated class for the TellPage page.
  *
@@ -13,15 +14,12 @@ import { CallNumber } from '@ionic-native/call-number';
   templateUrl: 'tell.html',
 })
 export class TellPage {
-  phoneNumber = {
-    item1: {
-      tell:'191',
-      name:'เหตุด่วนเหุตร้าย'
+  
+  constructor(public navCtrl: NavController) {
+  }
+   callIT(passedNumber){
+    //You can add some logic here
+    passedNumber = encodeURIComponent(passedNumber);
+     window.location = "tel:"+passedNumber;
     }
-  } 
-  constructor(public alerCtrl:AlertController,public navCtrl: NavController, public navParams: NavParams,private callNumber: CallNumber) {
-  }
-  CallPhone(number){
-    console.log(number)
-  }
 }
