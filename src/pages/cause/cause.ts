@@ -4,6 +4,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from "@ionic-native/camera";
 import { NgIf } from '@angular/common';
+import { NewsPage } from "../news/news";
 /**
  * Generated class for the CausePage page.
  *
@@ -17,7 +18,7 @@ import { NgIf } from '@angular/common';
 })
 export class CausePage {
   [x: string]: any;
-  constructor(private camera: Camera,private geolocation: Geolocation,public alertCtrl: AlertController) {
+  constructor(private camera: Camera,private geolocation: Geolocation,public alertCtrl: AlertController,public navCtrl: NavController) {
   }
   SOSinfo = {
     title:'',
@@ -28,6 +29,7 @@ export class CausePage {
   GImg2:any;
   GImg3:any;
   GImg4:any;
+  SUMimg={}
   
   TxtArray = [
     {name: 'panuwat', age:'22'},
@@ -50,6 +52,7 @@ export class CausePage {
       this.base64Image = "data:image/jpeg;base64," + imageData;
      if (id=='icon1') {
        this.GImg1 = this.base64Image;
+
      }else if (id =='icon2') {
        this.GImg2 = this.base64Image;
      }else if (id =='icon3') {
@@ -57,6 +60,7 @@ export class CausePage {
      }else if (id =='icon4') {
        this.GImg4 = this.base64Image;
      }
+     
 
     }, (err) => {
     // Handle error
@@ -64,7 +68,9 @@ export class CausePage {
     });
   }// end camera
    save(){
-     this.ShowAlert(this.SOSinfo.title, this.SOSinfo.des)
+     this.navCtrl.push(NewsPage,{
+       ArrayIMG:this.GImg1
+     })
     }
   
 
