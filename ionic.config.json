@@ -1,5 +1,10 @@
 {
+<<<<<<< HEAD
   "name": "AppTest",
   "app_id": "b50a8dba",
+=======
+  "name": "AppSOS",
+  "app_id": "45d5714f",
+>>>>>>> 92b770d15c0bc6d09e9e3b34cd7edf1115b412f0
   "type": "ionic-angular"
 }

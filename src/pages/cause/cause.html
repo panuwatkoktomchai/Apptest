@@ -17,36 +17,42 @@
   <ion-grid>
     <ion-row>
       <ion-col col-sm-6 col-md-4 col-lg-3>
-        <div id="icon">
-            <ion-icon name="add-circle" (click)="insert('img1')"></ion-icon>
+        <div id="icon1">
+            <ion-icon name="add-circle" (click)="insert('icon1')"></ion-icon>
+            <img [src]="GImg1" *ngIf="GImg1" />
         </div>
       </ion-col>
       <ion-col col-sm-6 col-md-4 col-lg-3>
-        <div id="icon">
-          <ion-icon name="add-circle" (click)="insert('img2')"></ion-icon>
+        <div id="icon2">
+          <ion-icon name="add-circle" (click)="insert('icon2')"></ion-icon>
+          <img [src]="GImg2" *ngIf="GImg2" />
         </div>
       </ion-col>
       <ion-col col-sm-6 col-md-4 col-lg-3>
-        <div id="icon">
-          <ion-icon name="add-circle" (click)="insert('img3')"></ion-icon>
+        <div id="icon3">
+          <ion-icon name="add-circle" (click)="insert('icon3')"></ion-icon>
+          <img [src]="GImg3" *ngIf="GImg3" />
         </div>
       </ion-col>
       <ion-col col-sm-6 col-md-4 col-lg-3>
-        <div id="icon">
-          <ion-icon name="add-circle" (click)="insert('img4')"></ion-icon>
+        <div id="icon4">
+          <ion-icon name="add-circle" (click)="insert('icon4')"></ion-icon>
+          <img [src]="GImg4" *ngIf="GImg4" />
         </div>
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <form (ngSubmit)="save()">
   <ion-list>
   <ion-item>
     <ion-label>แจ้งเหตุ</ion-label>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="เหตุ" value ="{{Ulocat.lati}}"></ion-input>
+    <ion-input placeholder="เหตุ" value ="" name = "title" [(ngModel)]="SOSinfo.title"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-textarea placeholder="รายละเอียด" value ="{{Ulocat.logi}}"></ion-textarea>
+    <ion-textarea placeholder="รายละเอียด" name="des" [(ngModel)]="SOSinfo.des"></ion-textarea>
   </ion-item>
   <ion-item  id="ohicon">
       <ion-icon name="pin" (click) ="Ulocation()"></ion-icon>
@@ -55,6 +61,7 @@
   <div align="center">
     <button ion-button type="submit" id="Submit">บันทึก</button>
   </div>
+  </form>
   </div>
   </ion-content>
 

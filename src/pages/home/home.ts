@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { CameraScannerBarcode } from "../../components/camera/camera";
 import { AboutPage } from "../about/about";
 
@@ -17,10 +17,7 @@ export class HomePage {
    Pass:string
    Age:string
   
-  constructor(public navCtrl: NavController ,private navParams: NavParams) {
-    this.Name = navParams.get('username');
-    this.Pass = navParams.get('password');
-    this.Age = navParams.get('age');
+  constructor(public navCtrl: NavController) {
   }
   aboutPage(txt){
     console.log(txt)

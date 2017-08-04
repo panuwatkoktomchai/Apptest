@@ -1,5 +1,5 @@
 page-cause {
-    #icon{
+    #icon1{
         border: solid 1px; //กำหนดเส้นขอบไอคอน
         border-radius: 5px; //ขอบโค้ง
         color: #F9ECFF; //สีไอคอน
@@ -7,9 +7,43 @@ page-cause {
         background-color: #FFCF0D; //พื้นหลังไอคอน
         font-size: 100px;
     }
-    #icon:hover{
-        background-color: white;
+    #icon2{
+        border: solid 1px; //กำหนดเส้นขอบไอคอน
+        border-radius: 5px; //ขอบโค้ง
+        color: #FF6F18; //สีไอคอน
+        text-align: center;
+        background-color: gold; //พื้นหลังไอคอน
+        font-size: 100px;
     }
+    #icon3{
+        border: solid 1px; //กำหนดเส้นขอบไอคอน
+        border-radius: 5px; //ขอบโค้ง
+        color: #FF6F18; //สีไอคอน
+        text-align: center;
+        background-color: gold; //พื้นหลังไอคอน
+        font-size: 100px;
+    }
+    #icon4{
+        border: solid 1px; //กำหนดเส้นขอบไอคอน
+        border-radius: 5px; //ขอบโค้ง
+        color: #FF6F18; //สีไอคอน
+        text-align: center;
+        background-color: gold; //พื้นหลังไอคอน
+        font-size: 100px;
+    }
+    #icon1:hover{
+        background-color: yellow;
+    }
+    #icon2:hover{
+        background-color: yellow;
+    }
+    #icon3:hover{
+        background-color: yellow;
+    }
+    #icon4:hover{
+        background-color: yellow;
+    }
+    
     #bordergrid{
         border: solid 1px;
         border-radius: 5px;
