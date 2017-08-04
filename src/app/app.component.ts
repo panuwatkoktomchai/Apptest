@@ -11,7 +11,7 @@ import { NotiryPage } from "../pages/notiry/notiry";
 })
 
 export class MyApp {
-  rootPage:any = NotiryPage;
+  rootPage:any = NotiryPage; //หน้าแรกที่จะแสดง
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

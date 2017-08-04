@@ -6,14 +6,12 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>โทรฉุกเฉิน V 2.0</ion-title>
+    <ion-title>สอบถามข้อมูล</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
  <ion-card>
-
     <img src="assets/img/img-title.jpg"/>
-
     <ion-card-content>
       <ion-card-title>
         สอบถามข้อมูล
@@ -23,15 +21,17 @@
       </p>
     </ion-card-content>
   </ion-card>
+
+<form (ngSubmit)="save()">
   <ion-item id="inputtext">
   <ion-item>
-    <ion-input type="text" placeholder="หัวข้อ"></ion-input>
+    <ion-input type="text" placeholder="หัวข้อ" name="topic" [(ngModel)]="Pam.topic" ></ion-input>
   </ion-item>
   <ion-item>
-    <ion-textarea type="text" placeholder="รายละเอียด" rows="10"></ion-textarea>
+    <ion-textarea type="text" placeholder="รายละเอียด" rows="10" name="detail" [(ngModel)]="Pam.detail" ></ion-textarea>
   </ion-item>
   </ion-item>
-    <button id="BT" ion-button full>
-      ส่งคำขอช่วยเหลือ
-    </button>
+    <button id="BT" type="submit" ion-button full>ส่งคำขอช่วยเหลือ</button>
+</form>
+  
 </ion-content>
