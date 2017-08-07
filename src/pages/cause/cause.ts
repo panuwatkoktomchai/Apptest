@@ -72,9 +72,22 @@ export class CausePage {
     });
   }// end camera
    save(){
-     this.navCtrl.push(NewsPage,{
-       ArrayIMG:this.GImg1
-     })
+     let strJSON = [{
+      "MemberID":"1",
+      "Name":"Weerachai",
+      "Tel":"0819876107"
+      },
+      {
+      "MemberID":"2",
+      "Name":"Win",
+      "Tel":"021978032"
+      },
+      {
+      "MemberID":"3",
+      "Name":"Eak",
+      "Tel":"087654321"
+      }]
+
     }
 
     Ulocation(){
