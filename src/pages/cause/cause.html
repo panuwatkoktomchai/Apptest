@@ -52,6 +52,9 @@
     <ion-textarea placeholder="รายละเอียด" name="des" [(ngModel)]="SOSinfo.des"></ion-textarea>
   </ion-item>
  <ion-icon id="ohicon" name="pin" (click) ="Ulocation()"></ion-icon>
+    ตำแหน่งปัจจุบันของคุนคือ
+    <p>{{ locat.latit }}</p>
+    <p>{{ locat.longit }}</p>
   </ion-list>
   <div align="center">
     <button ion-button type="submit" id="Submit">บันทึก</button>

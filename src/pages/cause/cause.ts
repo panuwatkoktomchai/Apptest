@@ -20,6 +20,10 @@ export class CausePage {
   [x: string]: any;
   constructor(private camera: Camera,private geolocation: Geolocation,public alertCtrl: AlertController,public navCtrl: NavController) {
   }
+  locat={
+    latit: 0,
+    longit: 0
+  }
   SOSinfo = {
     title:'',
     des:''
@@ -46,7 +50,7 @@ export class CausePage {
       destinationType: this.camera.DestinationType.DATA_URL ,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
-      allowEdit:true
+      
     }
     this.camera.getPicture(options).then((imageData) => {
       this.base64Image = "data:image/jpeg;base64," + imageData;
@@ -73,11 +77,13 @@ export class CausePage {
      })
     }
 
-    YourLocation(){
+    Ulocation(){
     
       this.geolocation.getCurrentPosition().then((resp) => {
-      // resp.coords.latitude
-      // resp.coords.longitude
+      console.log(resp.coords.latitude)
+      console.log(resp.coords.longitude)
+      this.locat.latit = resp.coords.latitude
+      this.locat.longit = resp.coords.longitude
       }).catch((error) => {
         console.log('Error getting location', error);
       });
