@@ -19,9 +19,20 @@ export class TellPage {
       name:'เหตุด่วนเหุตร้าย'
     }
   } 
-  constructor(public alerCtrl:AlertController,public navCtrl: NavController, public navParams: NavParams,private callNumber: CallNumber) {
+  constructor(public alerCtrl:AlertController,public navCtrl: NavController, public navParams: NavParams,private callNumber: CallNumber,public alertCtrl: AlertController) {
   }
-  CallPhone(number){
-    console.log(number)
+  CallPhone(numbert){
+    this.callNumber.callNumber(numbert, true)
+  .then(() => console.log('Launched dialer!'))
+  .catch((Error) => this.ShowAlert(Error));
   }
+
+  ShowAlert(txt1){
+      let alert = this.alertCtrl.create({
+        title: '!',
+        subTitle: txt1,
+        buttons: ['ok']
+      });
+      alert.present();
+      }
 }

@@ -1,7 +1,7 @@
 <!-- header -->
 <ion-header>
   <ion-navbar>
-    <ion-title>โทรฉุกเฉิน V 2.0</ion-title>
+    <ion-title>โทรฉุกเฉิน V 3.0</ion-title>
   </ion-navbar>
 </ion-header>
 <!-- header -->
@@ -26,7 +26,7 @@
       </ion-thumbnail>
       <h2>เหตุด่วนเหตุร้าย</h2>
       <p>191</p>
-      <button ion-button clear item-end><ion-icon id="call" name="md-call"></ion-icon></button>
+      <button ion-button clear item-end (click) = "CallPhone('192')"><ion-icon id="call" name="md-call"></ion-icon></button>
     </ion-item>
 
     <ion-item (click) = "CallPhone('192')">
@@ -35,7 +35,7 @@
       </ion-thumbnail>
       <h2>เตือนภัยพิบัติแห่งชาติ</h2>
       <p>192</p>
-      <button ion-button clear item-end><ion-icon id="call" name="md-call"></ion-icon></button>
+      <button ion-button clear item-end (click) = "CallPhone('192')" ><ion-icon id="call" name="md-call"></ion-icon></button>
     </ion-item>
 
     <ion-item (click) = "CallPhone('199')">
@@ -44,7 +44,7 @@
       </ion-thumbnail>
       <h2>ดับเพลิง</h2>
       <p>199</p>
-      <button ion-button clear item-end><ion-icon id="call" name="md-call"></ion-icon></button>
+      <button ion-button clear item-end (click) = "CallPhone('199')"><ion-icon id="call" name="md-call"></ion-icon></button>
     </ion-item>
 
     <ion-item (click) = "CallPhone('1554')">
