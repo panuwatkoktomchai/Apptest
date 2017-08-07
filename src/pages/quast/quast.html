@@ -6,14 +6,16 @@
 -->
 <ion-header>
   <ion-navbar>
+
+    <ion-title>สอบถามข้อมูล</ion-title>
+
     <ion-title>สอบถามเพิ่มเติม</ion-title>
+
   </ion-navbar>
 </ion-header>
 <ion-content padding>
  <ion-card>
-
     <img src="assets/img/img-title.jpg"/>
-
     <ion-card-content>
       <ion-card-title>
         สอบถามข้อมูล
@@ -23,15 +25,24 @@
       </p>
     </ion-card-content>
   </ion-card>
+
+<form (ngSubmit)="save()">
   <ion-item id="inputtext">
   <ion-item>
-    <ion-input type="text" placeholder="หัวข้อ" ></ion-input>
+    <ion-input type="text" placeholder="หัวข้อ" name="topic" [(ngModel)]="Pam.topic" ></ion-input>
+
   </ion-item>
   <ion-item>
-    <ion-textarea type="text" placeholder="รายละเอียด" rows="10"></ion-textarea>
+    <ion-textarea type="text" placeholder="รายละเอียด" rows="10" name="detail" [(ngModel)]="Pam.detail" ></ion-textarea>
   </ion-item>
   </ion-item>
+<<<<<<< HEAD
     <button id="BT" ion-button full (click)="presentActionSheet()">
       ส่งคำขอช่วยเหลือ
     </button>
+=======
+    <button id="BT" type="submit" ion-button full>ส่งคำขอช่วยเหลือ</button>
+</form>
+  
+>>>>>>> c78a9a2514bb6fbb0c146445598566a58926564a
 </ion-content>

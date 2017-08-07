@@ -16,11 +16,11 @@ import { CausePage } from "../pages/cause/cause";
 import { Geolocation } from '@ionic-native/geolocation';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { TellPage } from "../pages/tell/tell";
-import { CallNumber } from '@ionic-native/call-number';
 import { ShowalertComponent } from '../components/showalert/showalert';
 import { Facebook } from '@ionic-native/Facebook';
 import { NewsPage } from "../pages/news/news";
 import { QuastPage } from "../pages/quast/quast";
+import { CallNumber } from '@ionic-native/call-number';
 
 @NgModule({
   declarations: [
@@ -63,7 +63,7 @@ import { QuastPage } from "../pages/quast/quast";
     QRScanner,
     Geolocation,
     GoogleMaps,
-    CallNumber,
+    CallNumber ,
     Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler,}
   ]

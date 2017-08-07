@@ -11,58 +11,62 @@
   <ion-content padding-top>
     <ion-list>
 
-    <ion-item (click) = "CallPhone('1669')">
+    <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/icon/1669.png">
       </ion-thumbnail>
       <h2>เจ็บป่วยฉุกเฉิน</h2>
       <p>1669</p>
-      <button ion-button clear item-end><ion-icon id="call" name="md-call"></ion-icon></button>
+      <button ion-button (click)="callIT('1669')" item-end><a ion-button href="tel:1669" ><ion-icon id="call" name="md-call"></ion-icon></a></button>
     </ion-item>
 
-    <ion-item (click) = "CallPhone('191')">
+    <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/icon/191.png">
       </ion-thumbnail>
       <h2>เหตุด่วนเหตุร้าย</h2>
       <p>191</p>
-      <button ion-button clear item-end (click) = "CallPhone('192')"><ion-icon id="call" name="md-call"></ion-icon></button>
+      <button ion-button (click)="callIT('191')" item-end><a ion-button href="tel: 191" ><ion-icon id="call" name="md-call"></ion-icon></a></button>
     </ion-item>
 
-    <ion-item (click) = "CallPhone('192')">
+    
+
+
+    <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/icon/192.png">
       </ion-thumbnail>
       <h2>เตือนภัยพิบัติแห่งชาติ</h2>
       <p>192</p>
-      <button ion-button clear item-end (click) = "CallPhone('192')" ><ion-icon id="call" name="md-call"></ion-icon></button>
+       <button ion-button (click)="callIT('192')" item-end><a ion-button href="tel: 192" ><ion-icon id="call" name="md-call"></ion-icon></a></button>
     </ion-item>
 
-    <ion-item (click) = "CallPhone('199')">
+    <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/icon/199.png">
       </ion-thumbnail>
       <h2>ดับเพลิง</h2>
       <p>199</p>
-      <button ion-button clear item-end (click) = "CallPhone('199')"><ion-icon id="call" name="md-call"></ion-icon></button>
-    </ion-item>
 
-    <ion-item (click) = "CallPhone('1554')">
+      <button ion-button (click)="callIT('199')" item-end><a ion-button href="tel:199" ><ion-icon id="call" name="md-call"></ion-icon></a></button>
+     
+    </ion-item>
+    <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/icon/1554.png">
       </ion-thumbnail>
       <h2>หน่วยแพทย์กู้ชีวิต</h2>
       <p>1554</p>
-      <button ion-button clear item-end><ion-icon id="call" name="md-call"></ion-icon></button>
+       <button ion-button (click)="callIT('1554')" item-end><a ion-button href="tel:1554" ><ion-icon id="call" name="md-call"></ion-icon></a></button>
     </ion-item>
 
-    <ion-item (click) = "CallPhone('1130')">
+    <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/icon/1130.png">
       </ion-thumbnail>
       <h2>การไฟฟ้านครหลวง</h2>
       <p>1130</p>
-      <button ion-button clear item-end><ion-icon id="call" name="md-call"></ion-icon></button>
+       <button ion-button (click)="callIT('1130')" item-end><a ion-button href="tel:1130" ><ion-icon id="call" name="md-call"></ion-icon></a></button>
     </ion-item>
   </ion-list>
 <!-- content list -->

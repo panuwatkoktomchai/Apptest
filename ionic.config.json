@@ -1,5 +1,7 @@
 {
-  "name": "AppSOS",
-  "app_id": "45d5714f",
+
+  "name": "AppTest",
+  "app_id": "b50a8dba",
+
   "type": "ionic-angular"
 }
