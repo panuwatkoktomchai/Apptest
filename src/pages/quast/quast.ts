@@ -20,7 +20,7 @@ export class QuastPage {
     console.log('ionViewDidLoad QuastPage');
   }
 
-  Pam = {
+  Pam={
    topic:"", 
    detail:""
  }

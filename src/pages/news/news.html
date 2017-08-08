@@ -12,9 +12,9 @@
 
 <!--ข่าวน้ำท่วม-->
 
-<ion-content>
+<ion-content >
   <ion-card>
-      <img src="assets/img/news1.jpg">
+      <img src= {{SOSinfo.GImg1}}>
       <ion-fab right top>
         <button ion-fab id="fab1">
           <ion-icon name="contact"></ion-icon>
@@ -22,43 +22,20 @@
       </ion-fab>
       <ion-item id="card">
         <ion-icon name="boat" item-start large></ion-icon>
-        <h2>น้ำท่วมขอนแก่น</h2>
-        <p>ผู้สื่อข่าวรายงานว่า เมื่อช่วงค่ำวันที่ 26 มิถุนายน 2559 มาจนถึงเช้าวันนี้</p>
+        <h2>ข่าว : {{SOSinfo.title}} </h2>
+        <textarea id="card" rows="3">{{SOSinfo.des}}</textarea>
       </ion-item>
       <ion-item id="card">
         <ion-icon name="pin" item-left large ></ion-icon>
-        <h2>บ้านโนนทัน ขอนแก่น</h2>
-        <p>26 กรกฏาคม 2560</p>
+        <h2> {{SOSinfo.at}} </h2>
       </ion-item>
       <ion-item id="card">
         <span item-left>2 ชั่วโมง</span>
-        <span item-left>(17 นาที)</span>
+         
         <button ion-button icon-left clear item-end>
           <ion-icon name="git-merge"></ion-icon> <ion-icon name="chatbubbles"></ion-icon>      
         </button>
       </ion-item>
-  </ion-card>
-
-<!--ข่าวไฟไหม้-->
-
-  <ion-card>
-      <img src="assets/img/news2.jpg">
-      <ion-item id="card">
-        <ion-icon name="boat" item-start large></ion-icon>
-        <h2>เหตุด่วน เหตุร้าย</h2>
-        <p>ติดต่อเบอร์ข้างบนนี้นะค่ะ</p>
-      </ion-item>
-      <ion-item id="card">
-        <ion-icon name="pin" item-left large ></ion-icon>
-        <h2>บ้านโนนทัน ขอนแก่น</h2>
-        <p>26 กรกฏาคม 2560</p>
-      </ion-item>
-      <ion-item id="card">
-        <span item-left>2 ชั่วโมง</span>
-        <span item-left>(17 นาที)</span>
-        <button ion-button icon-left clear item-end>
-          <ion-icon name="git-merge"></ion-icon> <ion-icon name="chatbubbles"></ion-icon>      
-        </button>
-      </ion-item>
+     
   </ion-card>
 </ion-content>

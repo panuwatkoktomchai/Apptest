@@ -75,8 +75,14 @@ var AppModule = (function () {
                 { provide: ErrorHandler, useClass: IonicErrorHandler, }
             ]
         })
-    ], AppModule);
+    ], 
+    AppModule);
     return AppModule;
 }());
 export { AppModule };
+
+
+
+
+
 //# sourceMappingURL=app.module.js.map

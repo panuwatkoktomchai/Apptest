@@ -4,7 +4,8 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from "@ionic-native/camera";
 import { NgIf } from '@angular/common';
-import { NewsPage } from "../news/news";
+import { NewsPage } from "../news/news";  // 1. หน้าที่จะส่งข้อมูลไปแสดง
+
 /**
  * Generated class for the CausePage page.
  *
@@ -18,12 +19,26 @@ import { NewsPage } from "../news/news";
 })
 export class CausePage {
   [x: string]: any;
+ 
   constructor(private camera: Camera,private geolocation: Geolocation,public alertCtrl: AlertController,public navCtrl: NavController) {
   }
   SOSinfo = {
-    title:'',
-    des:''
+    title:'',   // 2 [(ngModel)]="SOSinfo.title
+    des:'',      //  [(ngModel)]="SOSinfo.des"
+    at:'',
+    GImg1: ''
+    
   }
+  gotToResult(){
+    this.navCtrl.push(NewsPage,{    //3 ส่งข้อมูลที่กรอกมา ไปหน้าอื่น
+      title: this.SOSinfo.title,
+      des: this.SOSinfo.des,
+      at: this.SOSinfo.at
+    });
+  }
+
+  
+
   urlImg :String
   GImg1:any;
   GImg2:any;
@@ -69,9 +84,12 @@ export class CausePage {
   }// end camera
    save(){
      this.navCtrl.push(NewsPage,{
-       ArrayIMG:this.GImg1
+       ArrayIMG:this.GImg1,
+       GImg1: this.GImg1
      })
     }
+
+    
 
     YourLocation(){
     
