@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { AlertController } from 'ionic-angular';
+import { AlertController, ActionSheetController } from 'ionic-angular';
 
 /**
  * Generated class for the QuastPage page.
@@ -14,23 +14,37 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'quast.html',
 })
 export class QuastPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
-  }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad QuastPage');
-  }
+  Pam = {
 
-  Pam={
    topic:"", 
    detail:""
- }
-  save() {
-    let alert = this.alertCtrl.create({
-      title: 'ยืนยันข้อมูล',
-      subTitle: "หัวข้อ :" + this.Pam.topic + "<br/>"+"รายละเอียด :" + this.Pam.detail,
-      buttons: ['ตกลง']
-    });
-    alert.present();
+ }  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController) {
   }
-
+   presentActionSheet() {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'SentTO',
+      buttons: [
+        {
+          text: 'Destructive',
+          role: 'destructive',
+          handler: () => {
+            console.log('Destructive clicked');
+          }
+        },{
+          text: 'Archive',
+          handler: () => {
+            console.log('Archive clicked');
+          }
+        },{
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+   }
 }

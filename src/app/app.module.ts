@@ -21,6 +21,7 @@ import { Facebook } from '@ionic-native/Facebook';
 import { NewsPage } from "../pages/news/news";
 import { QuastPage } from "../pages/quast/quast";
 import { CallNumber } from '@ionic-native/call-number';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CallNumber } from '@ionic-native/call-number';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

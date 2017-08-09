@@ -6,36 +6,37 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>ข่าวสาร</ion-title>
+    <ion-title>ข่าวสาร 5.00 น.</ion-title>
   </ion-navbar>
 </ion-header>
 
 <!--ข่าวน้ำท่วม-->
 
-<ion-content >
-  <ion-card>
-      <img src= {{SOSinfo.GImg1}}>
+<ion-content>
+  <ion-card  *ngFor = "let value of Newinfo; let i = index">
+      <ion-item >
+         {{value.photo1}}<!--รูป-->
+      </ion-item>
       <ion-fab right top>
-        <button ion-fab id="fab1">
-          <ion-icon name="contact"></ion-icon>
+        <button ion-fab id="fab1" (click)="getNews()">
+          <ion-icon name="contact" > </ion-icon>
         </button>
       </ion-fab>
       <ion-item id="card">
         <ion-icon name="boat" item-start large></ion-icon>
-        <h2>ข่าว : {{SOSinfo.title}} </h2>
-        <textarea id="card" rows="3">{{SOSinfo.des}}</textarea>
+        <!-- <h1>ลำดับ{{i+1}}</h1> -->
+        <h2>ข่าว : {{value.title}}</h2>
+        <h2 id="card" rows="3">รายละเอียด : {{value.des}}</h2>
       </ion-item>
       <ion-item id="card">
         <ion-icon name="pin" item-left large ></ion-icon>
-        <h2> {{SOSinfo.at}} </h2>
+        <h2> </h2>
       </ion-item>
       <ion-item id="card">
         <span item-left>2 ชั่วโมง</span>
-         
         <button ion-button icon-left clear item-end>
           <ion-icon name="git-merge"></ion-icon> <ion-icon name="chatbubbles"></ion-icon>      
         </button>
       </ion-item>
-     
   </ion-card>
 </ion-content>

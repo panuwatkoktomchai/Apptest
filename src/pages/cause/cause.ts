@@ -5,6 +5,7 @@ import { AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from "@ionic-native/camera";
 import { NgIf } from '@angular/common';
 import { NewsPage } from "../news/news";  // 1. หน้าที่จะส่งข้อมูลไปแสดง
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the CausePage page.
@@ -20,25 +21,12 @@ import { NewsPage } from "../news/news";  // 1. หน้าที่จะส�
 export class CausePage {
   [x: string]: any;
  
-  constructor(private camera: Camera,private geolocation: Geolocation,public alertCtrl: AlertController,public navCtrl: NavController) {
+  constructor(private camera: Camera,private storage: Storage,private geolocation: Geolocation,public alertCtrl: AlertController,public navCtrl: NavController) {
   }
-  SOSinfo = {
-    title:'',   // 2 [(ngModel)]="SOSinfo.title
-    des:'',      //  [(ngModel)]="SOSinfo.des"
-    at:'',
-    GImg1: ''
-    
+  locat={
+    latit: 0,
+    longit: 0
   }
-  gotToResult(){
-    this.navCtrl.push(NewsPage,{    //3 ส่งข้อมูลที่กรอกมา ไปหน้าอื่น
-      title: this.SOSinfo.title,
-      des: this.SOSinfo.des,
-      at: this.SOSinfo.at
-    });
-  }
-
-  
-
   urlImg :String
   GImg1:any;
   GImg2:any;
@@ -61,41 +49,81 @@ export class CausePage {
       destinationType: this.camera.DestinationType.DATA_URL ,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
-      allowEdit:true
+      
     }
     this.camera.getPicture(options).then((imageData) => {
       this.base64Image = "data:image/jpeg;base64," + imageData;
      if (id=='icon1') {
-       this.GImg1 = this.base64Image;
-
+       this.SOSinfo.Photo1 = this.base64Image;
      }else if (id =='icon2') {
-       this.GImg2 = this.base64Image;
+       this.SOSinfo.Photo2 = this.base64Image;
      }else if (id =='icon3') {
-       this.GImg3 = this.base64Image;
+       this.SOSinfo.Photo3 = this.base64Image;
      }else if (id =='icon4') {
-       this.GImg4 = this.base64Image;
+       this.SOSinfo.Photo4 = this.base64Image;
      }
-     
-
     }, (err) => {
     // Handle error
       this.ShowAlert("",err)
     });
   }// end camera
-   save(){
-     this.navCtrl.push(NewsPage,{
-       ArrayIMG:this.GImg1,
-       GImg1: this.GImg1
-     })
+
+
+  ngCause = {
+    "Title":'',   
+    "Des":'',      
+    "Photo1": '',
+    "Photo2":'',
+    "Photo3":'',
+    "Photo4":''
+  }
+  setCause: any = []
+  save(){
+    this.setCause = {
+      "Title": this.ngCause.Title,
+      "Des": this.ngCause.Des,
+      "Photo1": this.ngCause.Photo1,
+      "Photo2": this.ngCause.Photo2,
+      "Photo3": this.ngCause.Photo3,
+      "Photo4": this.ngCause.Photo4,
+    } 
+    this.storage.set('Title', this.setCause);
+    
+
+  }
+
+
+
+
+
+
+
+  YourLocation(){
+
+     let strJSON = [{
+      "MemberID":"1",
+      "Name":"Weerachai",
+      "Tel":"0819876107"
+      },
+      {
+      "MemberID":"2",
+      "Name":"Win",
+      "Tel":"021978032"
+      },
+      {
+      "MemberID":"3",
+      "Name":"Eak",
+      "Tel":"087654321"
+      }]
+
     }
 
-    
-
-    YourLocation(){
-    
+    Ulocation(){
       this.geolocation.getCurrentPosition().then((resp) => {
-      // resp.coords.latitude
-      // resp.coords.longitude
+      console.log(resp.coords.latitude)
+      console.log(resp.coords.longitude)
+      this.locat.latit = resp.coords.latitude
+      this.locat.longit = resp.coords.longitude
       }).catch((error) => {
         console.log('Error getting location', error);
       });

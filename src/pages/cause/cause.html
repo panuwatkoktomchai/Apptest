@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>แจ้งเหตุ</ion-title>
+    <ion-title>แจ้งเหตุ 5:00 PM</ion-title>
   </ion-navbar>
 </ion-header> 
 <ion-content>
@@ -41,29 +41,28 @@
         </ion-row>
       </ion-grid>
     </form>
+    
+  <form (ngSubmit)="save()">
+  <ion-list>
+  <ion-item>
+    <ion-label>แจ้งเหตุ</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="เหตุ" value ="" name = "Title" [(ngModel)]="ngCause.Title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-textarea placeholder="รายละเอียด" name="Des" [(ngModel)]="ngCause.Des"></ion-textarea>
+  </ion-item>
+ <ion-icon id="ohicon" name="pin" (click) ="Ulocation()"></ion-icon>
+    ตำแหน่งปัจจุบันของคุนคือ
+    <p>{{ locat.latit }}</p>
+    <p>{{ locat.longit }}</p>
+  </ion-list>
+  <div align="center">
+    <button ion-button type="submit" id="Submit">บันทึก</button>
 
-    <form (ngSubmit)="gotToResult()">
-      <ion-list>
-      <ion-item>
-        <ion-label>แจ้งเหตุ</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-input placeholder="เหตุ" value ="" name = "title" [(ngModel)]="SOSinfo.title"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-textarea placeholder="รายละเอียด" name="des" [(ngModel)]="SOSinfo.des"></ion-textarea>
-      </ion-item>
-       <ion-item>
-        <ion-input placeholder="สถานที่" name="at" [(ngModel)]="SOSinfo.at"></ion-input >
-      </ion-item>
-      <ion-item  id="ohicon">
-          <ion-icon name="pin" (click) ="Ulocation()"></ion-icon>
-      </ion-item>
-      </ion-list>
-      <div align="center">
-        <button ion-button type="submit" id="Submit">บันทึก</button>
-      </div>  
-    </form>
+  </div>
+  </form>
   </div>
 </ion-content>
 
